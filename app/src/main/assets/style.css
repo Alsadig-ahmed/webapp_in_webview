@@ -1,0 +1,130 @@
+/* Mobile first layout */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.mobile-app {
+  width: 100%;
+  max-width: 420px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+header {
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.todo-input {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+#new-task {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 12px 0 0 12px;
+  outline: none;
+}
+
+#new-task:focus {
+  border-color: #4CAF50;
+}
+
+#add-task-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  padding: 0 20px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#add-task-btn:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.1s;
+}
+
+li:active {
+  transform: scale(0.98);
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+li span {
+  flex: 1;
+  cursor: pointer;
+}
+
+li button {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+li button:hover {
+  background: #e04343;
+}
+
+/* Optional: handle taller screens */
+@media (min-height: 700px) {
+  .mobile-app {
+    height: 80vh;
+  }
+}

@@ -1,0 +1,2 @@
+rootProject.name = "webapp_in_webview"
+include(":app")
